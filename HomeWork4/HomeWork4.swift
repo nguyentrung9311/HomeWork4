@@ -46,8 +46,12 @@ class HomeWork4 {
                 }
                 break
             default:
-                studentManager.printStudentsWithMediumScore()
-                handleUserSelector()
+                if studentManager.getStudentCount() == 0 {
+                    print("Không có sinh viên nào trong danh sách, vui lòng thêm sinh viên trước!")
+                } else {
+                    studentManager.printStudentsWithMediumScore()
+                    handleUserSelector()
+                }
                 break
             }
         } else {
